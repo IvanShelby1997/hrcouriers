@@ -1,1 +1,21 @@
-test
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Воспроизведение видео с 7-й минуты</title>
+</head>
+<body>
+  <h1>Видео с Bitrix24</h1>
+  <video id="bitrixVideo" width="800" controls autoplay>
+    <source src="https://hrcouriers.bitrix24.ru/~NY64P" type="video/mp4">
+    Ваш браузер не поддерживает тег <code>video</code>.
+  </video>
+
+  <script>
+    const video = document.getElementById('bitrixVideo');
+    video.addEventListener('loadedmetadata', () => {
+      video.currentTime = 420; // 7 минут
+    });
+  </script>
+</body>
+</html>
